@@ -1,4 +1,4 @@
-package com.itbenevides.qualbanco;
+package com.itbenevides.qualbanco.dao;
 
 import android.content.ContentValues;
 import android.database.Cursor;
@@ -111,4 +111,6 @@ public class Banco implements DAO.IDAO{
     public String toString() {
         return this.nome;
     }
+
+
 }

@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:padding="2dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="3dp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Agência"
+                android:textColor="#dd595959"
+                android:textSize="5dp" />
+
+            <TextView
+                android:id="@+id/conta_agencia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:singleLine="true"
+                android:text="teste"
+                android:textSize="14sp"
+                android:layout_margin="4dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Conta corrente"
+                android:textColor="#dd595959"
+                android:textSize="5dp"
+                android:layout_below="@+id/conta_agencia" />
+
+            <TextView
+                android:id="@+id/conta_contacorrente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/conta_agencia"
+                android:singleLine="true"
+                android:text="teste"
+                android:textSize="14sp"
+                android:layout_margin="4dp" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="CPF"
+                android:textColor="#dd595959"
+                android:textSize="5dp"
+                android:layout_alignBottom="@+id/linearLayout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"  android:layout_below="@+id/conta_contacorrente"/>
+
+            <TextView
+                android:id="@+id/conta_cpf"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="teste"
+                android:textSize="14sp"
+                android:layout_below="@+id/textView6"
+                />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="Nome"
+                android:textColor="#dd595959"
+                android:textSize="5dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/conta_cpf"
+                />
+
+            <TextView
+                android:id="@+id/conta_nome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="teste"
+                android:textSize="14sp"
+                android:layout_below="@+id/textView7"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/conta_agencia"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:id="@+id/linearLayout">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Banco"
+                    android:textColor="#dd595959"
+                    android:textSize="5dp" />
+
+                <TextView
+                    android:id="@+id/conta_banco_nome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="teste"
+                    android:maxLength="25"
+                    android:textColor="#dd595959"
+                    android:textSize="8sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="Código"
+                    android:textColor="#dd595959"
+                    android:textSize="5dp" />
+
+                <TextView
+                    android:id="@+id/conta_banco_codigo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true"
+                    android:text="teste"
+                    android:textColor="#dd595959"
+                    android:textSize="8dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

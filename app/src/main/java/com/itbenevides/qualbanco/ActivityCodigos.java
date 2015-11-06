@@ -18,6 +18,8 @@ import android.widget.ImageView;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.itbenevides.qualbanco.dao.Banco;
+import com.itbenevides.qualbanco.dao.DAO;
 
 import java.util.List;
 
@@ -136,7 +138,7 @@ public class ActivityCodigos extends AppCompatActivity {
             rvBancos.setHasFixedSize(true);
 
       /*  JazzyRecyclerViewScrollListener jazzyScrollListener = new JazzyRecyclerViewScrollListener();
-        rvBancos.setOnScrollListener(jazzyScrollListener);*/
+        rvContas.setOnScrollListener(jazzyScrollListener);*/
 
             // LinearLayoutManager llm = new LinearLayoutManager(getApplicationContext());
 

@@ -9,10 +9,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Filter;
 import android.widget.Filterable;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 
+import com.itbenevides.qualbanco.dao.Banco;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -83,7 +83,7 @@ public class bancoAdapterList extends RecyclerView.Adapter<bancoAdapterList.Pers
         PersonViewHolder(View itemView) {
             super(itemView);
             cv = (CardView)itemView.findViewById(R.id.cv);
-            banconome = (TextView)itemView.findViewById(R.id.banco_nome);
+            banconome = (TextView)itemView.findViewById(R.id.conta_agencia);
             bancocodigo = (TextView)itemView.findViewById(R.id.banco_codigo);
 
 
@@ -145,7 +145,7 @@ public class bancoAdapterList extends RecyclerView.Adapter<bancoAdapterList.Pers
 
                     for (Banco banco: bancosorig) {
 
-                        if (banco.getNome().toLowerCase().contains(constraint.toString())||banco.getCodigobanco().toLowerCase().contains(constraint.toString()))  {
+                        if (banco.getNome().toLowerCase().contains(constraint.toString().toLowerCase())||banco.getCodigobanco().toLowerCase().contains(constraint.toString().toLowerCase()))  {
                             filtrosfrutos.add(banco);
                         }
                     }

@@ -49,7 +49,8 @@ public class MainActivity extends AppCompatActivity {
         tvContas.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Função não implementada ainda.", Snackbar.LENGTH_LONG).show();
+                Intent i = new Intent(MainActivity.this, ActivityContas.class);
+                startActivity(i);
             }
         });
 

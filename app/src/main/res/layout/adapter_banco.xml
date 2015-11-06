@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/banco_nome"
+                android:id="@+id/conta_agencia"
                 android:singleLine="true"
                 android:layout_alignParentTop="true"
                 android:textSize="14sp"
@@ -33,7 +33,7 @@
                 android:orientation="vertical"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical" android:background="@drawable/rounded_corner" android:layout_alignParentEnd="true"  android:layout_below="@+id/banco_nome">
+                android:gravity="center_vertical" android:background="@drawable/rounded_corner" android:layout_alignParentEnd="true"  android:layout_below="@+id/conta_agencia">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

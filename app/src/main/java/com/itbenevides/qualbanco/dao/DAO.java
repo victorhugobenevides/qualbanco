@@ -1,12 +1,14 @@
 
 
-package com.itbenevides.qualbanco;
+package com.itbenevides.qualbanco.dao;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+
+import com.itbenevides.qualbanco.Util;
 
 import java.util.List;
 
@@ -26,7 +28,7 @@ public class DAO extends SQLiteOpenHelper {
 
     ;
 
-    public static final int VERSAO = 21;
+    public static final int VERSAO = 24;
     public static String SISTEMA = "qualbanco";
     private Context context;
 
@@ -57,6 +59,7 @@ public class DAO extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase sqlitedatabase) {
 
         Banco.onCreate(sqlitedatabase, VERSAO);
+        Conta.onCreate(sqlitedatabase, VERSAO);
 
 
         Util util = new Util();
@@ -66,6 +69,9 @@ public class DAO extends SQLiteOpenHelper {
 
     }
 
+
+
+
     @Override
     public void onUpgrade(SQLiteDatabase sqlitedatabase, int oldVersion, int newVersion) {
         onCreate(sqlitedatabase);
@@ -74,10 +80,22 @@ public class DAO extends SQLiteOpenHelper {
 
     public void salvar(IDAO idao) {
         try {
-           // if (idao.getId_() == 0)
-                idao.setId_(getWritableDatabase().insert(idao.getTabela(), null, idao.getContentValues()));
-          //  else
-          //      getWritableDatabase().update(idao.getTabela(), idao.getContentValues(), "id_=?", new String[]{Long.toString(idao.getId_())});
+            // if (idao.getId_() == 0)
+            idao.setId_(getWritableDatabase().insert(idao.getTabela(), null, idao.getContentValues()));
+            //  else
+            //      getWritableDatabase().update(idao.getTabela(), idao.getContentValues(), "id_=?", new String[]{Long.toString(idao.getId_())});
+        } catch (Exception e) {
+            Log.e("Erro", e.getMessage().toString());
+        }
+    }
+
+
+    public void salvar2(IDAO idao) {
+        try {
+             if (idao.getId_() == 0)
+            idao.setId_(getWritableDatabase().insert(idao.getTabela(), null, idao.getContentValues()));
+              else
+                  getWritableDatabase().update(idao.getTabela(), idao.getContentValues(), "id_=?", new String[]{Long.toString(idao.getId_())});
         } catch (Exception e) {
             Log.e("Erro", e.getMessage().toString());
         }

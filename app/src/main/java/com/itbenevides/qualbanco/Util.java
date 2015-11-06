@@ -2,8 +2,7 @@ package com.itbenevides.qualbanco;
 
 import android.database.sqlite.SQLiteDatabase;
 
-import java.util.ArrayList;
-import java.util.List;
+import com.itbenevides.qualbanco.dao.Banco;
 
 /**
  * Created by Onnet on 05/11/2015.
