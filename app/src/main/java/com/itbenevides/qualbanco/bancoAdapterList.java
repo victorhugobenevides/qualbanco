@@ -39,26 +39,15 @@ public class bancoAdapterList extends RecyclerView.Adapter<bancoAdapterList.Pers
 
     @Override
     public PersonViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View v=null;
-
-        if(viewGroup == null) {
-
-        }else{
-            viewGroup.getTag();
-        }
 
 
-            v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.adapter_banco, viewGroup, false);
-
-
-        PersonViewHolder pvh = new PersonViewHolder(v);
-        return pvh;
+        return new PersonViewHolder(LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.adapter_banco, viewGroup, false));
     }
 
     @Override
     public void onBindViewHolder(PersonViewHolder personViewHolder, int i) {
 
-        StaggeredGridLayoutManager.LayoutParams layoutParams = new StaggeredGridLayoutManager.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        StaggeredGridLayoutManager.LayoutParams layoutParams = new StaggeredGridLayoutManager.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         layoutParams.setFullSpan(true);
         personViewHolder.itemView.setLayoutParams(layoutParams);
 

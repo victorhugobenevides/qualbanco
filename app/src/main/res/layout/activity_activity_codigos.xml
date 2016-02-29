@@ -14,7 +14,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_above="@+id/banner_app"
-        android:background="@color/colorPrimary">
+        android:theme="@style/Theme.AppCompat.DayNight">
 
 
         <LinearLayout
@@ -25,7 +25,7 @@
             android:layout_alignParentStart="true"
             android:layout_weight="9"
             android:id="@+id/linearlayout_list"
-            android:background="@color/colorPrimary"
+            android:theme="@style/Theme.AppCompat.DayNight"
             android:layout_above="@+id/imv_list">
 
             <android.support.v7.widget.RecyclerView
@@ -36,12 +36,12 @@
 
                 android:layout_alignParentEnd="true"
                 android:layout_margin="4dp"
-                android:background="@color/colorPrimary" />
+                android:theme="@style/Theme.AppCompat.DayNight" />
 
         </LinearLayout>
 
 
-        <ImageView
+        <ImageView android:theme="@style/Theme.AppCompat.DayNight"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:id="@+id/imv_list"
@@ -51,7 +51,7 @@
             android:layout_margin="10dp"
             android:visibility="gone" />
 
-        <ImageView
+        <ImageView android:theme="@style/Theme.AppCompat.DayNight"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:id="@+id/imv_grid"
@@ -61,7 +61,7 @@
             android:layout_toRightOf="@id/imv_list"
             android:layout_margin="10dp"
             android:layout_gravity="bottom"
-            android:visibility="visible" android:background="@drawable/rounded_corner_bt"/>
+            android:visibility="visible" />
 
     </RelativeLayout>
 

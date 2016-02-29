@@ -54,9 +54,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        AdView avPropaganda = (AdView) findViewById(R.id.banner_app);
-        inicializarAdListener(avPropaganda);
-        requisitarPropaganda(getApplicationContext(), avPropaganda);
+      //  AdView avPropaganda = (AdView) findViewById(R.id.banner_app);
+      //  inicializarAdListener(avPropaganda);
+       // requisitarPropaganda(getApplicationContext(), avPropaganda);
     }
 
     public static boolean requisitarPropaganda(Context contexto, AdView advBanner) {

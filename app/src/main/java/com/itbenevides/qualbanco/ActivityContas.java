@@ -230,16 +230,13 @@ public class ActivityContas extends AppCompatActivity {
 
 
     public void geraAlertaClickItem(final Conta conta) {
-        final Dialog dialog = new Dialog(this,R.style.ProgressBar2);
+        final Dialog dialog = new Dialog(this,android.support.v7.appcompat.R.style.Theme_AppCompat_DayNight_Dialog_Alert);
         Window window = dialog.getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND,
                 WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
 
 
-        int divierId = dialog.getContext().getResources()
-                .getIdentifier("android:id/titleDivider", null, null);
-        View divider = dialog.findViewById(divierId);
-        divider.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+
 
         dialog.setTitle("Item selecionado");
 
@@ -268,11 +265,11 @@ public class ActivityContas extends AppCompatActivity {
 
                 String text="";
 
-                text="Nome banco: "+bancos.get(posi[0]).getNome()+"\n\n"
-                        +"Código banco: "+bancos.get(posi[0]).getCodigobanco()+"\n\n"
-                        +"Agência: "+conta.getCodigoagencia()+"\n\n"
-                        +"Conta corrente: "+conta.getCodigoconta()+"\n\n"
-                        +"Nome: "+conta.getNome()+"\n\n"
+                text="Banco: "+bancos.get(posi[0]).getNome()+"\n"
+                        +"Código: "+bancos.get(posi[0]).getCodigobanco()+"\n"
+                        +"Agência: "+conta.getCodigoagencia()+"\n"
+                        +"Conta corrente: "+conta.getCodigoconta()+"\n"
+                        +"Nome: "+conta.getNome()+"\n"
                         +"CPF: "+conta.getCpf()+"\n\n"
                         +"Use o 'Qual Banco' você também:  https://goo.gl/CcVEWZ";
 
@@ -337,18 +334,18 @@ public class ActivityContas extends AppCompatActivity {
 
 
     public void geraAlertaGravar() {
-        final Dialog dialog = new Dialog(this,R.style.ProgressBar2);
+        final Dialog dialog = new Dialog(this,android.support.v7.appcompat.R.style.Theme_AppCompat_DayNight_DialogWhenLarge);
         Window window = dialog.getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_BLUR_BEHIND,
                 WindowManager.LayoutParams.FLAG_BLUR_BEHIND);
         dialog.setCancelable(false);
 
-        int divierId = dialog.getContext().getResources()
-                .getIdentifier("android:id/titleDivider", null, null);
-        View divider = dialog.findViewById(divierId);
-        divider.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+ //       int divierId = dialog.getContext().getResources()
+    //            .getIdentifier("android:id/titleDivider", null, null);
+      //  View divider = dialog.findViewById(divierId);
+//        divider.setBackgroundColor(getResources().getColor(R.color.colorPrimary));
 
-            dialog.setTitle("Cadastro de conta corrente");
+            dialog.setTitle("Conta corrente");
 
 
 
@@ -356,7 +353,7 @@ public class ActivityContas extends AppCompatActivity {
             dialog.setContentView(R.layout.dialog_cadastro_contas);
         final AutoCompleteTextView acbanco = (AutoCompleteTextView) dialog.findViewById(R.id.dialogac_banco);
         final List<Banco> bancos = Banco.consultar(DAO.getHelper(getApplicationContext()));
-        ArrayAdapter<Banco> adapter = new ArrayAdapter<Banco>(dialog.getContext(),android.R.layout.simple_dropdown_item_1line, bancos);
+        ArrayAdapter<Banco> adapter = new ArrayAdapter<Banco>(dialog.getContext(),R.layout.simple_dropdown_item_1line, bancos);
         acbanco.setAdapter(adapter);
 
         final TextView tvagencia = (TextView)dialog.findViewById(R.id.dialog_agencia);

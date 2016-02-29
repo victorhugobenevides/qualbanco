@@ -3,27 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-
+    android:theme="@style/Theme.AppCompat.DayNight"
     tools:context=".MainActivity"
     android:orientation="vertical"
     >
 
 
-    <TextView
+    <TextView android:theme="@style/Theme.AppCompat.DayNight"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="Lista de Bancos"
         android:textColor="#FFF"
         android:id="@+id/tv_btlistbancos"
-        android:background="@drawable/rounded_corner_bt_menu"
+
         android:gravity="center_vertical|center_horizontal"
         android:padding="6dp"
         android:layout_below="@+id/tv_contas"
-        android:layout_alignLeft="@+id/banner_app"
         android:layout_marginTop="14dp"
         android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp" />
+        android:layout_marginRight="6dp"
+        android:background="#000000" />
 
     <TextView
         android:layout_width="fill_parent"
@@ -32,17 +32,16 @@
         android:text="Contas"
         android:textColor="#FFF"
         android:id="@+id/tv_contas"
-        android:background="@drawable/rounded_corner_bt_menu"
+        android:theme="@style/Theme.AppCompat.DayNight"
         android:gravity="center_vertical|center_horizontal"
         android:padding="6dp"
         android:layout_below="@+id/imageView"
-        android:layout_alignLeft="@+id/banner_app"
-        android:layout_alignStart="@+id/banner_app"
         android:layout_marginTop="23dp"
         android:layout_marginLeft="6dp"
-        android:layout_marginRight="6dp" />
+        android:layout_marginRight="6dp"
+        android:background="#000000" />
 
-    <ImageView
+    <ImageView android:theme="@style/Theme.AppCompat.DayNight"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:id="@+id/imageView"
@@ -54,22 +53,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Qual Banco?"
+        android:text="Qual Banco?" android:theme="@style/Theme.AppCompat.DayNight"
         android:id="@+id/textView3"
         android:textSize="12dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="83dp" />
-
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/banner_app"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:visibility="visible"
-        app:adSize="SMART_BANNER"
-        app:adUnitId="@string/ad_unit_id_banner_todo_app" />
 
 </RelativeLayout>

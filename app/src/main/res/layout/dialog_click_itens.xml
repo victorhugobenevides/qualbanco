@@ -3,15 +3,18 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:orientation="vertical"
-    android:weightSum="5">
+    android:weightSum="5" android:theme="@style/Theme.AppCompat.DayNight"
+    android:padding="5dp">
 
     <Button
+        android:theme="@style/Theme.AppCompat.DayNight"
         android:id="@+id/dialog_bteditar"
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Editar" />
 
     <Button
+        android:theme="@style/Theme.AppCompat.DayNight"
         android:id="@+id/dialog_btcompartilhar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -19,6 +22,7 @@
         android:text="Compartilhar" />
 
     <Button
+        android:theme="@style/Theme.AppCompat.DayNight"
         android:id="@+id/dialog_btexcluir"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

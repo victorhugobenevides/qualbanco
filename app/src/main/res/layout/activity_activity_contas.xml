@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-
+android:theme="@style/Theme.AppCompat.DayNight"
     tools:context="com.itbenevides.qualbanco.ActivityContas">
 
     <android.support.v7.widget.RecyclerView
@@ -13,8 +13,9 @@
         android:id="@+id/rv"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:background="@color/colorPrimary"
-        android:layout_above="@+id/banner_app" />
+        android:theme="@style/Theme.AppCompat.DayNight"
+        android:layout_above="@+id/banner_app"
+        android:layout_alignParentTop="true" />
     <com.google.android.gms.ads.AdView
         android:id="@+id/banner_app"
         android:layout_width="wrap_content"
@@ -33,6 +34,7 @@
         android:layout_above="@+id/banner_app"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
-        android:src="@android:drawable/ic_input_add"
+        android:theme="@style/Theme.AppCompat.DayNight"
+        app:srcCompat="@android:drawable/ic_input_add"
         android:layout_margin="6dp" />
 </RelativeLayout>

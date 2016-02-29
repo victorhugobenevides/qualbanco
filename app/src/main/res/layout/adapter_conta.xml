@@ -3,23 +3,23 @@
     xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimary"
+    android:theme="@style/Theme.AppCompat.DayNight"
     android:padding="2dp">
 
     <android.support.v7.widget.CardView
-        android:id="@+id/cv"
+        android:id="@+id/cv" android:theme="@style/Theme.AppCompat.DayNight"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         card_view:cardCornerRadius="3dp"
         card_view:cardUseCompatPadding="true">
 
-        <RelativeLayout
+        <RelativeLayout android:theme="@style/Theme.AppCompat.DayNight"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp">
 
 
-            <TextView
+            <TextView android:theme="@style/Theme.AppCompat.DayNight"
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -28,7 +28,7 @@
                 android:textColor="#dd595959"
                 android:textSize="5dp" />
 
-            <TextView
+            <TextView android:theme="@style/Theme.AppCompat.DayNight"
                 android:id="@+id/conta_agencia"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,18 +38,18 @@
                 android:textSize="14sp"
                 android:layout_margin="4dp" />
 
-            <TextView
+            <TextView android:theme="@style/Theme.AppCompat.DayNight"
                 android:id="@+id/textView5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:text="Conta corrente"
-                android:textColor="#dd595959"
+
                 android:textSize="5dp"
                 android:layout_below="@+id/conta_agencia" />
 
             <TextView
-                android:id="@+id/conta_contacorrente"
+                android:id="@+id/conta_contacorrente" android:theme="@style/Theme.AppCompat.DayNight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
@@ -61,12 +61,12 @@
                 android:layout_margin="4dp" />
 
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/textView6" android:theme="@style/Theme.AppCompat.DayNight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:text="CPF"
-                android:textColor="#dd595959"
+
                 android:textSize="5dp"
                 android:layout_alignBottom="@+id/linearLayout"
                 android:layout_alignParentLeft="true"
@@ -74,7 +74,7 @@
 
             <TextView
                 android:id="@+id/conta_cpf"
-                android:layout_width="wrap_content"
+                android:layout_width="wrap_content" android:theme="@style/Theme.AppCompat.DayNight"
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:text="teste"
@@ -88,7 +88,7 @@
                 android:layout_height="wrap_content"
                 android:singleLine="true"
                 android:text="Nome"
-                android:textColor="#dd595959"
+                android:theme="@style/Theme.AppCompat.DayNight"
                 android:textSize="5dp"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
@@ -105,7 +105,7 @@
                 android:layout_below="@+id/textView7"
                 />
 
-            <LinearLayout
+            <LinearLayout android:theme="@style/Theme.AppCompat.DayNight"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
@@ -114,7 +114,7 @@
                 android:orientation="vertical"
                 android:id="@+id/linearLayout">
 
-                <TextView
+                <TextView android:theme="@style/Theme.AppCompat.DayNight"
                     android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
                     android:textColor="#dd595959"
                     android:textSize="5dp" />
 
-                <TextView
+                <TextView android:theme="@style/Theme.AppCompat.DayNight"
                     android:id="@+id/conta_banco_nome"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -133,7 +133,7 @@
                     android:textColor="#dd595959"
                     android:textSize="8sp" />
 
-                <TextView
+                <TextView android:theme="@style/Theme.AppCompat.DayNight"
                     android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -142,7 +142,7 @@
                     android:textColor="#dd595959"
                     android:textSize="5dp" />
 
-                <TextView
+                <TextView android:theme="@style/Theme.AppCompat.DayNight"
                     android:id="@+id/conta_banco_codigo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -152,6 +152,33 @@
                     android:textSize="8dp" />
 
             </LinearLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView2"
+                android:src="@android:drawable/ic_menu_share"
+                android:layout_alignBottom="@+id/conta_nome"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView3"
+                android:src="@android:drawable/ic_menu_edit"
+                android:layout_alignTop="@+id/imageView2"
+                android:layout_toLeftOf="@+id/imageView2"
+                android:layout_toStartOf="@+id/imageView2" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView4"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:layout_alignTop="@+id/imageView3"
+                android:layout_toLeftOf="@+id/imageView3"
+                android:layout_toStartOf="@+id/imageView3" />
 
         </RelativeLayout>
 
